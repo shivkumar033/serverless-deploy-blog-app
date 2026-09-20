@@ -1,4 +1,4 @@
-# UserBlog
+# Simple UserBlog-App
 
 UserBlog is a server-rendered blogging application built with Node.js, Express, EJS, and MongoDB. It lets visitors browse users, blogs, and individual user blog pages through a simple web interface.
 
