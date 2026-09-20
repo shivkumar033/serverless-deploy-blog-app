@@ -1,0 +1,23 @@
+service: user-blog-app
+
+provider:
+  name: aws
+  runtime: nodejs24.x
+  memorySize: 2048
+  timeout: 15
+  architecture: arm64
+  stage: dev
+  region: us-east-1
+  environment:
+    MONGO_URI: ${env:MONGO_URI}
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: ANY
+      - httpApi:
+          path: /
+          method: ANY

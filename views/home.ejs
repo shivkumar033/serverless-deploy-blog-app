@@ -1,0 +1,84 @@
+<%- include("partials/header") %>
+
+<section class="hero">
+
+    <h1>Welcome to UserBlog</h1>
+
+    <p>
+        Discover people, stories and interesting ideas.
+    </p>
+
+    <a href="/blogs" class="button">
+        Explore Blogs
+    </a>
+
+</section>
+
+
+<section>
+
+    <h2>Our Users</h2>
+
+    <div class="grid">
+
+        <% users.forEach(user => { %>
+
+            <div class="card">
+
+                <h3>
+                    <%= user.name %>
+                </h3>
+
+                <p>
+                    @<%= user.username %>
+                </p>
+
+                <p>
+                    <%= user.bio %>
+                </p>
+
+                <a href="/user/<%= user.username %>/blogs">
+                    View Blogs
+                </a>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <h2>Latest Blogs</h2>
+
+    <div class="grid">
+
+        <% blogs.forEach(blog => { %>
+
+            <div class="card">
+
+                <h3>
+                    <%= blog.title %>
+                </h3>
+
+                <p>
+                    By <%= blog.author.name %>
+                </p>
+
+                <p>
+                    <%= blog.content.substring(0, 120) %>...
+                </p>
+
+            </div>
+
+        <% }) %>
+
+    </div>
+
+</section>
+
+
+<%- include("partials/footer") %>

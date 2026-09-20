@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+
+<section>
+
+    <h1>
+        <%= user.name %>'s Blogs
+    </h1>
+
+    <p>
+        @<%= user.username %>
+    </p>
+
+    <p>
+        <%= user.bio %>
+    </p>
+
+</section>
+
+
+<section>
+
+    <div class="grid">
+
+        <% blogs.forEach(blog => { %>
+
+            <article class="card">
+
+                <h2>
+                    <%= blog.title %>
+                </h2>
+
+                <p>
+                    <%= blog.content %>
+                </p>
+
+            </article>
+
+        <% }) %>
+
+    </div>
+
+</section>
+
+<%- include("partials/footer") %>
