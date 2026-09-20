@@ -3,6 +3,16 @@
 UserBlog is a server-rendered blogging application built with Node.js, Express, EJS, and MongoDB. It lets visitors browse users, blogs, and individual user blog pages through a simple web interface.
 
 The application can run locally as an Express server or be deployed as a serverless application using AWS Lambda and API Gateway.
+<img src="screenshot/webpage.png" alt="Dashboard" width="600" height="300">
+
+## Table of Contents
+
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Requirements](#requirements)
+- [Run Locally](#run-locally)
+- [Deploy to AWS Lambda](#Deploy-to-AWS-lambda)
 
 ## Features
 
